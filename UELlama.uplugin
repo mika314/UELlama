@@ -1,0 +1,24 @@
+{
+	"FileVersion": 3,
+	"Version": 1,
+	"VersionName": "1.0",
+	"FriendlyName": "UELlama",
+	"Description": "Integration plugin for Llama 2 language model",
+	"Category": "Other",
+	"CreatedBy": "Mika Pi",
+	"CreatedByURL": "",
+	"DocsURL": "",
+	"MarketplaceURL": "",
+	"SupportURL": "",
+	"CanContainContent": true,
+	"IsBetaVersion": false,
+	"IsExperimentalVersion": false,
+	"Installed": false,
+	"Modules": [
+		{
+			"Name": "UELlama",
+			"Type": "Runtime",
+			"LoadingPhase": "Default"
+		}
+	]
+}
