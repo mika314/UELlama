@@ -1,4 +1,4 @@
-// 2013 (c) Mika Pi
+// 2023 (c) Mika Pi
 
 #include "UELlama/LlamaComponent.h"
 #include <atomic>

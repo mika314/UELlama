@@ -1,4 +1,4 @@
-// 2013 (c) Mika Pi
+// 2023 (c) Mika Pi
 
 #pragma once
 #include <Components/ActorComponent.h>
