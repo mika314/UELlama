@@ -34,6 +34,12 @@ public:
   UPROPERTY(EditAnywhere, BlueprintReadWrite)
   FString prompt = "Hello";
 
+  UPROPERTY(EditAnywhere, BlueprintReadWrite)
+  FString pathToModel = "/media/mika/Michigan/prj/llama-2-13b-chat.ggmlv3.q8_0.bin";
+
+  UPROPERTY(EditAnywhere, BlueprintReadWrite)
+  TArray<FString> stopSequences;
+
   UFUNCTION(BlueprintCallable)
   void InsertPrompt(const FString &v);
 
