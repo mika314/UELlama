@@ -12,4 +12,4 @@ cd ..
 cmake --build build --config Release -j --verbose
 ```
 
-Then the .so file was copied into the `Libraries` directory and all the .h files were copied to the `Includes` directory.
+Then the .so or .lib file was copied into the `Libraries` directory and all the .h files were copied to the `Includes` directory. In Windows you should put the build/bin/llama.dll into `Binaries/Win64` directory.
