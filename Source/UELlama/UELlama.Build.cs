@@ -62,6 +62,9 @@ public class UELlama : ModuleRules
 		{
 			PublicAdditionalLibraries.Add(Path.Combine(PluginDirectory, "Libraries", "libllama.so"));
 			PublicIncludePaths.Add(Path.Combine(PluginDirectory, "Includes"));
+		} else if (Target.Platform == UnrealTargetPlatform.Win64) {
+			PublicAdditionalLibraries.Add(Path.Combine(PluginDirectory, "Libraries", "libllama.lib"));
+            PublicIncludePaths.Add(Path.Combine(PluginDirectory, "Includes"));
 		}
 
 	}
