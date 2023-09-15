@@ -113,6 +113,10 @@ namespace Internal
 
   auto Llama::unsafeInsertPrompt(FString v) -> void
   {
+    if (!ctx) {
+      UE_LOG(LogTemp, Error, TEXT("Llama not activated"));
+      return;
+    }
     auto stdV = std::string(" ") + TCHAR_TO_UTF8(*v);
     auto line_inp = my_llama_tokenize(ctx, stdV, false /* add bos */);
     embd_inp.insert(embd_inp.end(), line_inp.begin(), line_inp.end());
