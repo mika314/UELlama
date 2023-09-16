@@ -30,16 +30,23 @@ namespace
 
   auto Q::enqueue(function<void()> v) -> void
   {
-    lock_guard<mutex> l(mutex_);
+    lock_guard l(mutex_);
     q.emplace_back(move(v));
   }
 
   auto Q::processQ() -> bool
   {
-    lock_guard l(mutex_);
-    if (q.empty()) return false;
-    q.front()();
-    q.pop_front();
+    auto v = [this]() -> function<void()> {
+      lock_guard l(mutex_);
+      if (q.empty())
+        return nullptr;
+      auto v = move(q.front());
+      q.pop_front();
+      return v;
+    }();
+    if (!v)
+      return false;
+    v();
     return true;
   }
   // TODO: not great allocating this every time
