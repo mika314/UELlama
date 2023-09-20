@@ -22,11 +22,11 @@ public:
   ULlamaComponent(const FObjectInitializer &ObjectInitializer);
   ~ULlamaComponent();
 
-  auto Activate(bool bReset) -> void final;
-  auto Deactivate() -> void final;
-  auto TickComponent(float DeltaTime,
-                     enum ELevelTick TickType,
-                     FActorComponentTickFunction *ThisTickFunction) -> void final;
+  virtual void Activate(bool bReset) override;
+  virtual void Deactivate() override;
+  virtual void TickComponent(float DeltaTime,
+                             ELevelTick TickType,
+                             FActorComponentTickFunction* ThisTickFunction) override;
 
   UPROPERTY(BlueprintAssignable)
   FOnNewTokenGenerated OnNewTokenGenerated;

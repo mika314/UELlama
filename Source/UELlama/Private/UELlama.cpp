@@ -12,13 +12,13 @@
 
 #define LOCTEXT_NAMESPACE "FUELlamaModule"
 
-auto FUELlamaModule::StartupModule() -> void
+void FUELlamaModule::StartupModule()
 {
   llama_backend_init(true /*numa*/);
   IModuleInterface::StartupModule();
 }
 
-auto FUELlamaModule::ShutdownModule() -> void
+void FUELlamaModule::ShutdownModule()
 {
   IModuleInterface::ShutdownModule();
   llama_backend_free();
@@ -26,4 +26,4 @@ auto FUELlamaModule::ShutdownModule() -> void
 
 #undef LOCTEXT_NAMESPACE
 
-IMPLEMENT_MODULE(FUELlamaModule, EULlama)
+IMPLEMENT_MODULE(FUELlamaModule, UELlama)

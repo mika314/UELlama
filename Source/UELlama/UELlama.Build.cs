@@ -42,7 +42,7 @@ public class UELlama : ModuleRules
 			}
 			);
 
-		if (Target.bBuildEditor == true)
+		if (Target.bBuildEditor)
 		{
 			PrivateDependencyModuleNames.AddRange(
 				new string[]
@@ -63,7 +63,7 @@ public class UELlama : ModuleRules
 			PublicAdditionalLibraries.Add(Path.Combine(PluginDirectory, "Libraries", "libllama.so"));
 			PublicIncludePaths.Add(Path.Combine(PluginDirectory, "Includes"));
 		} else if (Target.Platform == UnrealTargetPlatform.Win64) {
-			PublicAdditionalLibraries.Add(Path.Combine(PluginDirectory, "Libraries", "libllama.lib"));
+			PublicAdditionalLibraries.Add(Path.Combine(PluginDirectory, "Libraries", "llama.lib"));
             PublicIncludePaths.Add(Path.Combine(PluginDirectory, "Includes"));
 		}
 

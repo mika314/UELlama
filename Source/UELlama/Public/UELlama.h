@@ -8,8 +8,7 @@
 class FUELlamaModule final : public IModuleInterface
 {
 public:
-  void StartupModule() final;
-  void ShutdownModule() final;
+  virtual void StartupModule() override;
+  virtual void ShutdownModule() override;
 
-private:
 };
