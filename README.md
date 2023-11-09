@@ -3,7 +3,7 @@
 
 # Llama.cpp Build Parameters
 
-Llama.cpp was built from git hash: `dadbed99e65252d79f81101a392d0d6497b86caa`
+Llama.cpp was built from git hash: `a40f2b656fab364ce0aff98dbefe9bd9c3721cc9`
 
 With the following build commands:
 
